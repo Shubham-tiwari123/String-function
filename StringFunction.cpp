@@ -1,11 +1,17 @@
 #include <iostream>
 #include "StringFunction.h"
+#include <string>
+#include <stack>
+#include <algorithm>
 using namespace std;
 
+string::iterator itr;
+stack <char> c;
+string name;
 void StringFunction::acceptData(){
     int flag =0;
     cout<<"\nEnter the string:-";
-    getline(cin,name);    
+    getline(cin,name);
 }
 void StringFunction::displayData(){
     cout<<endl;
@@ -19,10 +25,8 @@ void StringFunction::removeDuplicate(){
     int flag =1;
     int z=0;
     for(i = 0;i<name.length();i++){
-        cout<<name[i]<<"\t";
         c.push(name[i]);
     }
-    cout<<endl;
     while(!c.empty()){
         if(a[z]=='a'){
             a[z]=c.top();
@@ -50,5 +54,5 @@ void StringFunction::removeDuplicate(){
     cout<<endl;
     for(i=z;i>=0;i--)
         cout<<a[i];
-    
+
 }
