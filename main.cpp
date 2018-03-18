@@ -12,4 +12,7 @@ int main(){
     s.acceptData();
     /*function to remove the duplicate values*/
     s.removeDuplicate();
+    /*fuction to count the most occurance character*/
+    s.mostOccurance();
+
 }
