@@ -3,15 +3,17 @@
 #include <string>
 #include <stack>
 #include <algorithm>
+#include <map>
 using namespace std;
-
 string::iterator itr;
 stack <char> c;
+map<int,char> m;
+map<int,char>::iterator it;
 string name;
 void StringFunction::acceptData(){
     int flag =0;
     cout<<"\nEnter the string:-";
-    getline(cin,name);
+    getline(cin,name);    
 }
 void StringFunction::displayData(){
     cout<<endl;
@@ -27,6 +29,7 @@ void StringFunction::removeDuplicate(){
     for(i = 0;i<name.length();i++){
         c.push(name[i]);
     }
+    cout<<endl;
     while(!c.empty()){
         if(a[z]=='a'){
             a[z]=c.top();
@@ -54,5 +57,41 @@ void StringFunction::removeDuplicate(){
     cout<<endl;
     for(i=z;i>=0;i--)
         cout<<a[i];
-
+    
+}
+void StringFunction::mostOccurance(){
+    
+    for(i=0;i<10;i++)
+        flag[i]=0;
+    
+    for(i=0;i<name.length();i++){
+        count=1;
+        for(int j=i+1;j<name.length();j++){
+            if(name[i]==name[j]){
+                if(flag[j]!=1){
+                    count++;
+                    flag[j]=1;
+                    flag1 =1;
+                }
+            }
+        }
+        if(flag1==1){
+            num = count;
+            data = name[i];
+            m.insert(pair<int,char>(count,name[i]));
+            flag1 = 0;
+        }
+    }
+    if(m.empty()){
+        cout<<"no repeated word";
+    }
+    else{
+        for(it = m.begin();it!=m.end();it++){
+            if (it ->first > currentMax)
+            {
+                maax = it->first;
+            }
+        }
+        cout<< m.find(maax)->second;
+    }
 }
