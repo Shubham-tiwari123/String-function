@@ -1,5 +1,7 @@
-#ifndef STRINGFUNCTION_H_INCLUDED
-#define STRINGFUNCTION_H_INCLUDED
+
+#ifndef STRINGFUNCTION_H
+#define STRINGFUNCTION_H
+#include <iostream>
 
 class StringFunction{
 private:
@@ -12,15 +14,21 @@ private:
     int flag1 =0;
     unsigned currentMax = 0;
     unsigned maax = 0;
+    unsigned minm = 0;
+    int k;
 public:
     void acceptData();
     void displayData();
     void removeSpace();
     void removeDuplicate();
     void mostOccurance();
+    void kthNonRepeating();
+    void subString();
     StringFunction(){
         a[0] = 'a';
     }
 };
 
-#endif // STRINGFUNCTION_H_INCLUDED
+#endif /* STRINGFUNCTION_H */
+
+
