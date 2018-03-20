@@ -127,7 +127,8 @@ void StringFunction::kthNonRepeating(){
 
 void StringFunction::subString(){
     int length,ans;
-    length = name.length();
+    cout<<"\nEnter length of substrings:-";
+    cin>>length;
     ans = length*(length+1)/2;
     cout<<"\nNumber of substrings possible:-"<<ans;
 }
