@@ -14,5 +14,9 @@ int main(){
     s.removeDuplicate();
     /*fuction to count the most occurance character*/
     s.mostOccurance();
-
+    /*fuction to display kth non repeting characters*/
+    s.kthNonRepeating();
+    /*function to count number of substrings*/
+    s.subString();
 }
+
