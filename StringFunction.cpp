@@ -95,3 +95,39 @@ void StringFunction::mostOccurance(){
         cout<< m.find(maax)->second;
     }
 }
+
+void StringFunction::kthNonRepeating(){
+    int j,count1=0;
+    cout<<"\nEnter the k value:-";
+    cin>>k;
+    for(i=0;i<10;i++)
+        flag[i]=0;
+    for(i=0;i<name.length();i++){
+       count=1;
+       for(j=i+1;j<=name.length();j++){
+           if(name[i]==name[j]){
+               if(flag[j]!=1){
+                    count=0;
+                    flag[j]=1;
+                    break;
+                }
+            }
+           else if(flag[i]==1){
+               count = 0;
+               break;
+           }
+        }
+       if(count==1 && count1<k){
+           cout<<name[i];
+           count1++;
+       }
+       flag1=0;
+    }   
+}
+
+void StringFunction::subString(){
+    int length,ans;
+    length = name.length();
+    ans = length*(length+1)/2;
+    cout<<"\nNumber of substrings possible:-"<<ans;
+}
